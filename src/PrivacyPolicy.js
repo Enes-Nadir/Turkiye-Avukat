@@ -140,7 +140,8 @@ function PrivacyPolicy() {
       <Box>
         <Typography variant="body2" color="text.secondary">
           İletişim: <br />
-          E-posta: avukat@hukukofisi.com <br />
+          E-posta: danismanlik.turkiyeavukat@gmail.com
+          <br />
           Telefon: (+90) 530 570 94 40
         </Typography>
       </Box>

@@ -84,7 +84,7 @@ function Contact() {
                         (+90) 530 570 94 40
                       </MKTypography>
                       <MKTypography variant="body2" color="white">
-                        avukat@hukukofisi.com
+                        danismanlik.turkiyeavukat@gmail.com
                       </MKTypography>
                       <MKTypography variant="body2" color="white">
                         İstanbul, Türkiye

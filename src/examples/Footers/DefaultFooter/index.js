@@ -86,18 +86,16 @@ function DefaultFooter() {
                   to="https://wa.me/905305709440"
                   style={{ color: "inherit", textDecoration: "none" }}
                 >
-                  <strong>WhatsApp</strong>
+                  <strong>WhatsApp</strong>: (+90) 530 570 94 40
                 </Link>
-                : (+90) 530 570 94 40
               </p>
               <p>
                 <a
-                  href="mailto:avukat@hukukofisi.com"
+                  href="mailto:danismanlik.turkiyeavukat@gmail.com"
                   style={{ color: "inherit", textDecoration: "none" }}
                 >
-                  <strong>E-posta</strong>
+                  <strong>E-posta</strong>: danismanlik.turkiyeavukat@gmail.com
                 </a>
-                : avukat@hukukofisi.com
               </p>
             </Typography>
           </Grid>
