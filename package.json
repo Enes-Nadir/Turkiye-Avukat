@@ -2,17 +2,11 @@
   "name": "material-kit-2-react",
   "version": "2.1.0",
   "private": true,
-  "author": "Creative Tim",
-  "license": "See license in https://www.creative-tim.com/license",
-  "description": "React version of Material Kit 2 by Creative Tim",
-  "bugs": {
-    "url": "https://github.com/creativetimofficial/ct-material-kit-react/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/creativetimofficial/ct-material-kit-react.git"
-  },
+  "author": "Enes",
+  "description": "Turkiye Avukat",
+  "homepage": "https://github.com/Enes-Nadir/Turkiye-Avukat",
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@emotion/cache": "11.10.7",
     "@emotion/react": "11.10.6",
     "@emotion/styled": "11.10.6",
@@ -41,7 +35,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint ./src",
-    "prettify": "prettier --write ."
+    "prettify": "prettier --write .",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -70,6 +66,7 @@
     "eslint-plugin-prettier": "4.2.1",
     "eslint-plugin-react": "7.32.2",
     "eslint-plugin-react-hooks": "4.6.0",
+    "gh-pages": "^6.3.0",
     "prettier": "2.8.7"
   }
 }

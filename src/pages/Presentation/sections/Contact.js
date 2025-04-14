@@ -1,39 +1,35 @@
-// @mui material components
-import Container from "@mui/material/Container";
-import Grid from "@mui/material/Grid";
-
-// Material Kit 2 React components
+import React from "react";
+import emailjs from "@emailjs/browser";
+import {
+  Container,
+  Grid,
+  Button,
+  TextField,
+  FormControl,
+  InputLabel,
+  Select,
+  MenuItem,
+} from "@mui/material"; // Importing missing components
 import MKBox from "components/MKBox";
-import MKInput from "components/MKInput";
-import MKButton from "components/MKButton";
 import MKTypography from "components/MKTypography";
-
-// Images
 import bgImage from "assets/images/ContactForm.jpg";
 
-//Menu Items
-import Select from "@mui/material/Select";
-import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
-import InputLabel from "@mui/material/InputLabel";
+const sendEmail = (e) => {
+  e.preventDefault();
 
-<FormControl variant="standard" fullWidth required>
-  <InputLabel id="service-label">Hizmet Seçin *</InputLabel>
-  <Select labelId="service-label" defaultValue="">
-    <MenuItem value="Tapu Taşınmaz İşlemleri">Tapu Taşınmaz İşlemleri</MenuItem>
-    <MenuItem value="Ceza Hukuku">Ceza Hukuku</MenuItem>
-    <MenuItem value="Şirketler Hukuku">Şirketler Hukuku</MenuItem>
-    <MenuItem value="Kentsel Dönüşüm Hukuku">Kentsel Dönüşüm Hukuku</MenuItem>
-    <MenuItem value="Miras Hukuku">Miras Hukuku</MenuItem>
-    <MenuItem value="Vatandaşlık Hukuku">Vatandaşlık Hukuku</MenuItem>
-    <MenuItem value="Ticaret Hukuku">Ticaret Hukuku</MenuItem>
-    <MenuItem value="Tazminat Davaları">Tazminat Davaları</MenuItem>
-    <MenuItem value="Aile Boşanma Hukuku">Aile Boşanma Hukuku</MenuItem>
-    <MenuItem value="Vergi Hukuku">Vergi Hukuku</MenuItem>
-    <MenuItem value="İnşaat Hukuku">İnşaat Hukuku</MenuItem>
-    <MenuItem value="Çek Senet İcra">Çek Senet İcra</MenuItem>
-  </Select>
-</FormControl>;
+  emailjs
+    .sendForm("service_v3wkelf", "template_xaplh7a", e.target, {
+      publicKey: "1JD0M_--MlSS2Jryw",
+    })
+    .then(() => {
+      alert("Mesajınız başarıyla gönderildi!");
+      e.target.reset(); // Clear form
+    })
+    .catch((error) => {
+      console.error("EmailJS Error:", error);
+      alert("Mesaj gönderilirken bir hata oluştu. Lütfen tekrar deneyin.");
+    });
+};
 
 function Contact() {
   return (
@@ -100,7 +96,12 @@ function Contact() {
 
               {/* RIGHT SIDE - Contact Form */}
               <Grid item xs={12} lg={7}>
-                <MKBox component="form" p={2} method="post">
+                <MKBox
+                  component="form"
+                  p={2}
+                  method="post"
+                  onSubmit={sendEmail} // Add emailjs sendEmail handler
+                >
                   <MKBox px={3} py={{ xs: 2, sm: 6 }}>
                     <MKTypography variant="h3" mb={1}>
                       Bize Ulaşın
@@ -112,20 +113,29 @@ function Contact() {
                   <MKBox pt={0.5} pb={3} px={3}>
                     <Grid container spacing={3}>
                       <Grid item xs={12}>
-                        <MKInput required variant="standard" label="Adınız Soyadınız" fullWidth />
+                        <TextField
+                          label="Adınız Soyadınız"
+                          name="user_name"
+                          variant="outlined"
+                          fullWidth
+                          required
+                          sx={{ mb: 2 }}
+                        />
                       </Grid>
                       <Grid item xs={12}>
-                        <MKInput
-                          required
-                          variant="standard"
-                          label="E-posta veya Telefon numarası"
+                        <TextField
+                          label="E-posta veya Whatsapp numarası"
+                          name="user_email"
+                          variant="outlined"
                           fullWidth
+                          required
+                          sx={{ mb: 2 }}
                         />
                       </Grid>
                       <Grid item xs={12}>
                         <FormControl variant="standard" fullWidth required>
                           <InputLabel id="service-label">Hizmet Seçin</InputLabel>
-                          <Select labelId="service-label" defaultValue="">
+                          <Select labelId="service-label" name="service" defaultValue="">
                             <MenuItem value="Tapu Taşınmaz İşlemleri">
                               Tapu Taşınmaz İşlemleri
                             </MenuItem>
@@ -146,19 +156,30 @@ function Contact() {
                         </FormControl>
                       </Grid>
                       <Grid item xs={12}>
-                        <MKInput
-                          required
-                          variant="standard"
+                        <TextField
                           label="Mesajınız"
+                          name="message"
+                          variant="outlined"
+                          fullWidth
                           multiline
                           rows={4}
-                          fullWidth
+                          required
+                          sx={{ mb: 2 }}
                         />
                       </Grid>
                       <Grid item xs={12} textAlign="right">
-                        <MKButton variant="gradient" color="info" type="submit">
+                        <Button
+                          variant="contained"
+                          type="submit"
+                          sx={{
+                            backgroundColor: "#25D366",
+                            "&:hover": {
+                              backgroundColor: "#1ebe5d",
+                            },
+                          }}
+                        >
                           MESAJ GÖNDER
-                        </MKButton>
+                        </Button>
                       </Grid>
                     </Grid>
                   </MKBox>
