@@ -46,7 +46,7 @@ export default function App() {
         {getRoutes(routes)}
         <Route path="/" element={<Presentation />} />
         <Route path="/Gizlilik-Politikası" element={<PrivacyPolicy />} />
-        <Route path="*" element={<Navigate to="/presentation" />} />
+        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </ThemeProvider>
   );
