@@ -1,3 +1,5 @@
+// src/App.js
+// Triggering rebuild
 import { useEffect } from "react";
 
 // react-router components
