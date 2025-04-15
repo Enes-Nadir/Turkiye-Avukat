@@ -4,7 +4,7 @@
   "private": true,
   "author": "Enes",
   "description": "Turkiye Avukat",
-  "homepage": "https://github.com/Enes-Nadir/Turkiye-Avukat",
+  "homepage": ".",
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@emotion/cache": "11.10.7",
