@@ -40,7 +40,7 @@ function Presentation() {
         }}
       >
         <Container>
-          <Grid container item xs={12} lg={7} justifyContent="center" mx="auto">
+          <Grid container item xs={12} lg={7} justifyContent="center" mx="auto" textAlign="center">
             <MKTypography
               variant="h1"
               color="white"
@@ -52,7 +52,7 @@ function Presentation() {
                 },
               })}
             >
-              Türkiye Avukat{" "}
+              Türkiye Avukat
             </MKTypography>
             <MKTypography
               variant="body1"
@@ -63,6 +63,31 @@ function Presentation() {
             >
               📍 Avrupa&apos;da Yaşayan Türkler İçin Hukuki Destek
             </MKTypography>
+
+            {/* WhatsApp CTA */}
+            <Box mt={4}>
+              <Typography variant="body1" fontWeight="bold" color="#FFFFFF" mb={1}>
+                Bizimle WhatsApp’tan iletişime geçin!{" "}
+              </Typography>
+
+              <Button
+                variant="contained"
+                sx={{
+                  backgroundColor: "#25D366",
+                  fontWeight: "bold",
+                  color: "#FFFFFF",
+                  fontSize: "1rem",
+                  padding: "10px 24px",
+                  "&:hover": {
+                    backgroundColor: "#1ebe5d",
+                  },
+                }}
+                href="https://wa.me/905305709440"
+                target="_blank"
+              >
+                WHATSAPP İLE İLETİŞİM
+              </Button>
+            </Box>
           </Grid>
         </Container>
       </MKBox>
