@@ -29,7 +29,7 @@ function Presentation() {
   return (
     <>
       <MKBox
-        minHeight="75vh"
+        minHeight="50vh"
         width="100%"
         sx={{
           backgroundImage: `url(${bgImage})`,
@@ -42,7 +42,7 @@ function Presentation() {
         <Container>
           <Grid container item xs={12} lg={7} justifyContent="center" mx="auto" textAlign="center">
             <MKTypography
-              variant="h1"
+              variant="h2"
               color="white"
               mt={-6}
               mb={1}
@@ -64,29 +64,24 @@ function Presentation() {
               📍 Avrupa&apos;da Yaşayan Türkler İçin Hukuki Destek
             </MKTypography>
 
-            {/* WhatsApp CTA */}
+            {/* Phone Call CTA */}
             <Box mt={4}>
               <Typography variant="body1" fontWeight="bold" color="#FFFFFF" mb={1}>
-                Bizimle WhatsApp’tan iletişime geçin!{" "}
+                Bizi Arayın:
               </Typography>
-
-              <Button
-                variant="contained"
+              <Typography
+                variant="h6"
+                color="#FFFFFF"
+                component="a"
+                href="tel:+905305709440"
                 sx={{
-                  backgroundColor: "#25D366",
+                  textDecoration: "none",
                   fontWeight: "bold",
-                  color: "#FFFFFF",
-                  fontSize: "1rem",
-                  padding: "10px 24px",
-                  "&:hover": {
-                    backgroundColor: "#1ebe5d",
-                  },
+                  "&:hover": { textDecoration: "underline" },
                 }}
-                href="https://wa.me/905305709440"
-                target="_blank"
               >
-                WHATSAPP İLE İLETİŞİM
-              </Button>
+                +90 530 570 94 40
+              </Typography>
             </Box>
           </Grid>
         </Container>
