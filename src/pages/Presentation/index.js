@@ -24,6 +24,7 @@ import footerRoutes from "footer.routes";
 
 // Images
 import bgImage from "assets/images/Banner.jpg";
+import lawmaker from "assets/images/lawmaker.png";
 
 function Presentation() {
   return (
@@ -97,6 +98,43 @@ function Presentation() {
           boxShadow: ({ boxShadows: { xxl } }) => xxl,
         }}
       >
+        {/* New Text Section before Servislerimiz */}
+        <Container sx={{ mt: 5, mb: 3 }}>
+          <Grid container spacing={3} alignItems="center" justifyContent="center">
+            {/* Text Section */}
+            <Grid item xs={12} md={8}>
+              <MKTypography variant="h4" gutterBottom>
+                AVRUPA’DAKİ GURBETÇİLERİMİZİN HUKUKTAKİ GÜVENCESİ
+              </MKTypography>
+              <MKTypography variant="body1" color="text">
+                Avrupa’da yaşayan değerli vatandaşlarımız için hukuk alanında güvenilir ve etkili
+                çözümler sunuyoruz. Türkiye hukuk sistemine hâkim uzman avukat kadromuzla,
+                karşılaştığınız her türlü hukuki sorunda yanınızdayız. Her aşamada şeffaf bilgi
+                akışı sağlayarak, süreci sizin adınıza en hızlı ve güvenilir şekilde yönetiyoruz.
+                Avukatlık hizmetlerimizi, Avrupa’nın birçok ülkesinde yaşayan gurbetçilerimizin
+                ihtiyaçlarına göre şekillendiriyor; dil, kültür ve hukuk farklarını göz önünde
+                bulundurarak sizlere en doğru desteği sağlıyoruz. Her zaman bir telefon veya bir
+                mesaj kadar yakınız! İnternet sitemiz üzerinden kolayca bizimle iletişime geçebilir,
+                uzman avukatlarımızdan ücretsiz ön danışmanlık alabilirsiniz.
+                <b> Memleketten uzakta olsanız da haklarınız bizimle güvende…</b>
+              </MKTypography>
+            </Grid>
+
+            {/* Image Section */}
+            <Grid item xs={12} md={4} textAlign="center">
+              <Box
+                component="img"
+                src={lawmaker}
+                alt="Hukuk resmi"
+                sx={{
+                  width: "100%",
+                  height: "auto",
+                  mx: { xs: "auto", md: 0 },
+                }}
+              />
+            </Grid>
+          </Grid>
+        </Container>
         {/* Servislerimiz */}
         <Information />
         <Container sx={{ mt: 6 }}>

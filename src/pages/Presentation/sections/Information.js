@@ -90,7 +90,7 @@ function Information() {
                 📄
               </Typography>
             </Box>
-            <Typography align="center">Çek Senet İcra</Typography>
+            <Typography align="center">Alacak Tahsilatı ve İcra İşlemleri</Typography>
           </Grid>
         </Grid>
       </Container>
