@@ -66,14 +66,6 @@ function DefaultFooter() {
             <Typography variant="h6" fontWeight="bold" mb={2}>
               Avukat Hukuk Bürosu
             </Typography>
-            <Typography variant="body2" color="text.secondary">
-              <p>
-                <strong>Avukat Hukuk Bürosu</strong>, müvekkillerine kaliteli ve güvenilir hukuki
-                danışmanlık hizmeti sunan, deneyimli bir ekibe sahip bir hukuk bürosudur.
-                Avrupa&apos;da Türk vatandaşlarına yönelik hukuki destek sağlamak amacıyla faaliyet
-                göstermektedir.
-              </p>
-            </Typography>
           </Grid>
 
           <Grid item xs={12} md={3} sx={{ mb: 3 }}>

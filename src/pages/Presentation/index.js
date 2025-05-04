@@ -24,7 +24,6 @@ import footerRoutes from "footer.routes";
 
 // Images
 import bgImage from "assets/images/Banner.jpg";
-import lawmaker from "assets/images/lawmaker.png";
 
 function Presentation() {
   return (
@@ -118,20 +117,6 @@ function Presentation() {
                 uzman avukatlarımızdan ücretsiz ön danışmanlık alabilirsiniz.
                 <b> Memleketten uzakta olsanız da haklarınız bizimle güvende…</b>
               </MKTypography>
-            </Grid>
-
-            {/* Image Section */}
-            <Grid item xs={12} md={4} textAlign="center">
-              <Box
-                component="img"
-                src={lawmaker}
-                alt="Hukuk resmi"
-                sx={{
-                  width: "100%",
-                  height: "auto",
-                  mx: { xs: "auto", md: 0 },
-                }}
-              />
             </Grid>
           </Grid>
         </Container>
